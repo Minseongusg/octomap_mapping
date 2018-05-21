@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<launch>
+<group ns="firefly1">
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server_firefly1">
+		<param name="resolution" value="0.1" />
+		
+		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+		<param name="frame_id" type="string" value="world" />
+		
+		<!-- maximum range to integrate (speedup!) -->
+		<param name="sensor_model/max_range" value="50.0" />
+		
+		<!-- data source to integrate (PointCloud2) -->
+		<remap from="cloud_in" to="/firefly1/M8_lidar" />
+	
+	</node>
+</group>
+<group ns="firefly2">
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server_firefly2">
+		<param name="resolution" value="0.1" />
+		
+		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+		<param name="frame_id" type="string" value="world" />
+		
+		<!-- maximum range to integrate (speedup!) -->
+		<param name="sensor_model/max_range" value="50.0" />
+		
+		<!-- data source to integrate (PointCloud2) -->
+		<remap from="cloud_in" to="/firefly2/M8_lidar" />
+	
+	</node>
+</group>
+<group ns="husky1">
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server_husky1">
+		<param name="resolution" value="0.1" />
+		
+		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+		<param name="frame_id" type="string" value="world" />
+		
+		<!-- maximum range to integrate (speedup!) -->
+		<param name="sensor_model/max_range" value="50.0" />
+		
+		<!-- data source to integrate (PointCloud2) -->
+		<remap from="cloud_in" to="/husky1/m8_husky_lidar" />
+	
+	</node>
+</group>
+<group ns="husky2">
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server_husky2">
+		<param name="resolution" value="0.1" />
+		
+		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+		<param name="frame_id" type="string" value="world" />
+		
+		<!-- maximum range to integrate (speedup!) -->
+		<param name="sensor_model/max_range" value="50.0" />
+		
+		<!-- data source to integrate (PointCloud2) -->
+		<remap from="cloud_in" to="/husky2/m8_husky_lidar" />
+	
+	</node>
+</group>
+</launch>
