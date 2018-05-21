@@ -66,6 +66,18 @@ target_link_libraries(octomap_server_multilayer ${PROJECT_NAME} ${LINK_LIBS})
 add_executable(octomap_saver src/octomap_saver.cpp)
 target_link_libraries(octomap_saver ${PROJECT_NAME} ${LINK_LIBS})
 
+add_executable(octomap_firefly1_saver src/octomap_firefly1_saver.cpp)
+target_link_libraries(octomap_firefly1_saver ${PROJECT_NAME} ${LINK_LIBS})
+
+add_executable(octomap_firefly2_saver src/octomap_firefly2_saver.cpp)
+target_link_libraries(octomap_firefly2_saver ${PROJECT_NAME} ${LINK_LIBS})
+
+add_executable(octomap_husky1_saver src/octomap_husky1_saver.cpp)
+target_link_libraries(octomap_husky1_saver ${PROJECT_NAME} ${LINK_LIBS})
+
+add_executable(octomap_husky2_saver src/octomap_husky2_saver.cpp)
+target_link_libraries(octomap_husky2_saver ${PROJECT_NAME} ${LINK_LIBS})
+
 add_executable(octomap_tracking_server_node src/octomap_tracking_server_node.cpp)
 target_link_libraries(octomap_tracking_server_node ${PROJECT_NAME} ${LINK_LIBS})
 
