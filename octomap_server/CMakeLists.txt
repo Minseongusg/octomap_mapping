@@ -63,6 +63,9 @@ target_link_libraries(octomap_server_static ${PROJECT_NAME} ${LINK_LIBS})
 add_executable(octomap_server_multilayer src/octomap_server_multilayer.cpp)
 target_link_libraries(octomap_server_multilayer ${PROJECT_NAME} ${LINK_LIBS})
 
+add_executable(octomap_2_pointcloud src/octree2pointcloud.cpp)
+target_link_libraries(octree2pointcloud ${PROJECT_NAME} ${LINK_LIBS})
+
 add_executable(octomap_saver src/octomap_saver.cpp)
 target_link_libraries(octomap_saver ${PROJECT_NAME} ${LINK_LIBS})
 
